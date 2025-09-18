@@ -266,6 +266,17 @@
   </div>
 </section>
 
+<!-- JS to control play button -->
+<script>
+  document.querySelectorAll('.play-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const video = btn.previousElementSibling;
+      video.play();
+      video.setAttribute("controls", "true");
+      btn.style.display = 'none';
+    });
+  });
+</script>
   
 <!-- Services section -->
 <section id="services" class="py-20">
